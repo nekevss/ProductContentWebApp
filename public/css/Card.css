@@ -1,0 +1,54 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+.main-container {
+    margin-top: 75px;
+    width: auto;
+    height:auto;
+    padding: 0 13%;
+    justify-content: center;
+    align-content: center;
+}
+
+.node-container {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+}
+
+
+.Card {
+    display: inline-block;
+    margin: 8px 6px;
+    padding: 4px;
+    height: 300px;
+    width: 170px;
+    box-shadow: 0px 1px 5px 1px grey;
+}
+
+.Card div {
+    overflow: hidden;
+    margin: 6px 8px;
+}
+
+.Card:hover {
+    background-color: lightgray;
+}
+
+
+.NodeData img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 72%;
+    height: 110px;
+}
+
+#SkuName {
+    height: 54px;
+    overflow: hidden;
+}
+

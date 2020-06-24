@@ -1,0 +1,24 @@
+body {
+    cursor: default;
+}
+
+.main-container {
+    padding-top: 75px;
+}
+
+.node-container {
+    display:flex;
+    margin: 0 33%;
+    flex-direction: column;
+}
+
+.node-container div {
+    box-shadow: 0 1px 5px 1px grey;
+    margin: 8px 0;
+    padding: 8px;
+    text-align: center;
+}
+
+.view-node:hover {
+    background-color: lightgray;
+}

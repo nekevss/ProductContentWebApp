@@ -1,0 +1,147 @@
+body {
+    cursor: default;
+}
+
+.main-container {
+    padding-top: 75px;
+    display: flex;
+    flex-direction: column;
+}
+
+.node-container {
+    display:flex;
+    margin: 0 12%;
+    flex-direction: row;
+}
+
+.table-container {
+    margin: 0 1px;
+    width: 43%;
+}
+
+.table-container table {
+    width: 98%;
+}
+
+table, td {
+    border: 2px solid lightgray;
+    border-collapse: collapse;
+}
+
+tr {
+    height: 110px;
+}
+
+.controls-container {
+    display: flex;
+    flex-direction:column;
+    margin: 0 4px;
+    height: 150px;
+}
+
+.controls-container button {
+    display: inline-block;
+    border-radius: 4px;
+    margin: 4px 0;
+    padding: 8px 6px;
+    border:none;
+    background-color: #cc0000;;
+    color: white;
+    font-size: 16px;
+    height: 50px;
+    transition-duration: 0.4s;
+}
+
+.controls-container button:hover {
+    background-color: white;
+    color:black;
+    border: 1px solid #cc0000;
+    padding: 8px 6px;
+    font-size: 16px;
+    height: 50px;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.page-overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.report-display {
+    display: flex;
+    flex-direction: row;
+    width: 68%;
+    height: 700px;
+    background-color: rgba(255,255,255, 1);
+    margin-top:70px;
+    margin-bottom: 75px;
+    margin-left: 15%;
+    opacity: 1;
+    z-index: 50;
+}
+
+.report-nav {
+    width: 20%;
+    height: 100%;
+    opacity: 1;
+    z-index:50;
+    background-color:lightgray;
+    overflow-y: auto;
+}
+
+.tab-header {
+    opacity: 1;
+    padding: 10px 4px;
+    background-color:lightgray;
+    border-bottom: 1px solid gray;
+}
+
+.current-tab {
+    opacity: 1;
+    padding: 8px 4px;
+    background-color:gray;
+    border-bottom: 1px solid gray;
+}
+
+.report-tab {
+    opacity: 1;
+    padding: 8px 4px;
+    background-color:lightgray;
+    border-bottom: 1px solid gray;
+}
+
+.report-tab:hover {
+    background-color: gray;
+}
+
+.report-container {
+    overflow:hidden;
+    width: 90%;
+    height: 100%;
+    opacity: 1;
+    z-index: 50;
+    overflow-y: auto;
+}
+
+.report-container h2 {
+    margin: 5% 20%;
+}
+
+.report-container table, td {
+    border: 1px solid lightgray;
+}
+
+.report-container table {
+    table-layout: fixed;
+    overflow:hidden;
+    margin: 6px 8px;
+    width: 95%;
+}
+
+.report-container td {
+    justify-content: center;
+}

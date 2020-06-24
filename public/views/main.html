@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Image Checker</title>
+    <script type="text/javascript" src=".\scripts\mainOnLoad.js"></script>
+    <script type="text/javascript" src=".\scripts\imagezoom.js"></script>
+    <script type="text/javascript" src=".\scripts\viewFunctionLib.js"></script>
+    <script type="text/javascript" src=".\scripts\generator.js"></script>
+    <link rel="stylesheet" type="text/css" href="..\css\navbar.css">
+    <link rel="stylesheet" type="text/css" href="..\css\Main.css">
+
+</head>
+<body>
+    <!--Should just try div's instead of buttons -->
+    <div id="nav" class="navbar">
+        <div class="controlbtns">
+            <button id="Back" onclick="lastindex()">Back</button>
+            <button id="Next" onclick="nextindex()">Next</button>
+            <button id="MenuBtn" onclick="openmenu()">Menu</button>
+        </div>
+        <div id="navbarHeader">
+            <p id="header">Image Checker</p>
+        </div>
+        <div class="historybtns">
+            <button onclick="location.href='./ViewMenu.html'">View Menu</button>
+        </div>
+    </div>
+    <div id="Menu">
+	<div class="MenuTop">
+        <div class="Message" id="MenuMessage"></div>
+        <div class="CloseBtn"><button id="MenuClose" onclick="closemenu()" style="float:right;">Close</button></div>
+    </div>
+	<div id="MenuBlocks"></div>
+    </div>
+    <div class="container">
+        <div id="PPH" class="PPHBar">Oh no! What have you done!!!</div>
+        <div class="top-data-container">
+            <div class="ImageGallery">
+                <div id="CentralImage" class="Central"></div>
+                <div id="ImageGrid" class="Grid"></div>
+            </div>
+            <div id="ImageZoom" class="img-zoom-result"></div>
+            <div class="TitleContainer">
+                <div class="SkuNameBlock">
+		            <div class="BlockTop" id="SkuChart"></div>
+            	    <div id="SkuName">If you're seeing this, You broke me!</div>
+		            <div class="BlockTop" id="SkuNumbersChart"></div>
+                </div>
+                <div id="StyleGuideBlock">
+                    <div id="RecTitle">Recommended Name: </div>
+                    <div id="GenName"></div>
+		            <div id="SGClass">Oh no!!!!!!!!</div>
+                    <div id="StyleGuide">The horror. The absolute horror</div>
+	            </div>
+	            <div class="InfoBlock" id="ExtraInfo"></div>
+            </div>
+        </div>
+
+        <div class="WrittenContentContainer">
+            <h4>Product Details</h4>
+            <p id="headliner">Something goes here</p>
+            <p id="shortdescription">What did I ever do to you to break me???</p>
+
+            <div id="bullets">
+                
+
+            </div>
+
+            <p id="extendeddescription">For real though, just find Kevin or whoever is currently in charge of fixing this thing</p>
+
+        </div>
+        <div class="SpecContainer">
+	        <h4>Specifications</h4>
+            <div class="Stable"id="SpecTable"></div>
+        </div>
+    </div>
+
+</body>
+</html>

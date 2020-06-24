@@ -1,0 +1,74 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.navbar {
+    cursor: default;
+    display:flex;
+    flex-direction: row;
+    position:fixed;
+    top: 0px;
+    width:100%;
+    margin: 0px;
+    padding: 0px;
+    z-index:50;
+    background-color: #cc0000;
+    height:50px;
+    box-shadow: 0 1px 5px 1px grey;
+}
+
+.navbar div{
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+.controlbtns {
+    width: 30%;
+    height: 100%;
+}
+
+.controlbtns button {
+    display:inline-block;
+    border:none;
+    width: 20%;
+    height: 50px;
+    margin:0;
+    padding:0;
+    text-align:center;
+    background-color: #cc0000;
+    color:white;
+}
+
+.controlbtns button:hover {
+    background-color:darkred;
+}
+
+#navbarHeader {
+    height:100%;
+    width: 40%;
+    margin: 0;
+    text-align:center;
+    color: white;
+}
+
+.historybtns {
+    width: 30%;
+    height: 100%;
+}
+
+.historybtns button {
+    border: none;
+    width: 95px;
+    height: 50px;
+    margin:0;
+    padding:0;
+    text-align:center;
+    background-color: #cc0000;
+    color:white;
+}
+
+.historybtns button:hover {
+    background-color:darkred;
+}

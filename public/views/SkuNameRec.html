@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Image Checker</title>
+    <script type="text/javascript" src="..\References\ObjectIndex.js"></script>
+    <script type="text/javascript" src="..\References\SkuNameGenerators.js"></script>
+    <script type="text/javascript" src="..\scripts\generator.js"></script>
+    <script type="text/javascript" src="..\scripts\SkuNameOnLoad.js"></script>
+    <link rel="stylesheet" type="text/css" href="..\css\navbar.css">
+    <link rel="stylesheet" type="text/css" href="..\css\rec.css">
+</head>
+<body>
+    <div id="nav" class="navbar">
+        <div class="controlbtns">
+        </div>
+        <div id="navbarHeader">
+            <p id="header">Recommended Sku Names</p>
+        </div>
+        <div class="historybtns">
+            <button onclick="location.href='./ViewMenu.html'">View Menu</button>
+        </div>
+    </div>
+    <div id="report-view" class='page-overlay' style="display:none" onclick="closeReportView()"></div>
+    <div class="main-container">
+        <div class="node-container">
+            <div id="SkuTable" class="table-container"></div>
+            <div id="RecTable" class="table-container"></div>
+            <div class="controls-container">
+                <button id="Copy" onclick="CopyAllNames()">Copy all values</button>
+                <button id="Report" onclick="logReport()">Report</button>
+            </div>
+        </div>
+    </div>
+</body>

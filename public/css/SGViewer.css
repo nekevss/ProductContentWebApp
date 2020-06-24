@@ -1,0 +1,21 @@
+table, td {
+    border-collapse: collapse;
+}
+
+.container div {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#update-header {
+    margin-top: 75px;
+}
+
+.table-container {
+    margin-top: 25px;
+}
+
+.table-container table, td {
+    border: 2px solid lightgray;
+}
+

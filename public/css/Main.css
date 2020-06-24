@@ -1,0 +1,317 @@
+﻿body{
+    padding: 0px;
+    margin: 0px;
+}
+
+table, td {
+    border-collapse: collapse;
+}
+
+
+#Menu  {
+    position: fixed;
+    display: none;
+    background-color: white;
+    right: 3px;
+    margin-top:5px;
+    height:100%;
+    width: 50%;
+    overflow-y: auto;
+    overflow-x:hidden;
+    z-index: 2;
+    box-shadow: 0 1px 5px 1px grey;
+}
+
+.MenuTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    background-color: #fcc9b9;
+    width: 100%;
+    height: 72px;
+}
+
+.MenuTop div {
+    width: 25%;
+    height: auto;
+    margin:0;
+    padding: 12px 24px;
+}
+
+
+.CloseBtn button {
+    border: none;
+    margin: auto;
+    width: 50%;
+    height:60%;
+}
+
+.CloseBtn button:hover{
+    background-color: darkgray;
+}
+
+#MenuBlocks {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: center;
+    padding: 25px 25px 100px 25px;
+}
+
+.MenuNode {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 150px;
+    width: 100%;
+    margin: 6px 8px;
+    box-shadow: 0 1px 5px 1px grey;
+}
+
+.MenuNode:hover {
+    background-color:lightgray;
+}
+
+
+.NodeImg {
+    flex: 30%;
+    height: 100%;
+    padding: 10px 5px;
+}
+
+.NodeImg img {
+    margin: 5px;
+    height:115px;
+    width: 115px;
+}
+
+.NodeInfo {
+    flex: 65%;
+    width: 73%;
+    height: 100%;
+    padding: 1px;
+}
+
+
+#NodeClass{
+    margin: 3px;
+    height: 25%;
+    padding: 4px 8px;
+    width: 70%;
+    overflow-wrap: normal;
+}
+
+.histname {
+    margin: 8px 12px 4px 12px;
+    width: 75%;
+}
+
+.histcount {
+    margin: 4px 12px;
+    width: 75%;
+}
+
+.NodeClasses {
+    margin: 4px 12px;
+    max-height: 50px;
+    overflow: hidden;
+}
+
+.removebtn {
+    margin: 4px 12px;
+    width: 25%;
+}
+
+#NodeName {
+    margin: 3px;
+    height: 59%;
+    padding: 4px 8px;
+    width: 95%;
+    overflow-wrap: normal;
+}
+
+.container {
+    margin-top: 50px;
+    display:flex;
+    flex-wrap: wrap;
+    height:100%;
+    width: 100%;
+}
+
+
+.PPHBar {
+    width: 99%;
+    height: 30px;
+    padding:10px 20px;
+    margin-top: 15px;
+}
+
+.container div {
+    min-height: 15%;
+    min-width: 15%;
+}
+
+.top-data-container {
+    display:flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 900px;
+}
+
+.ImageGallery {
+    height: 800px;
+    width: 50%;
+    margin: 20px;
+    text-align:center;
+}
+
+.Central {
+    position: relative;
+    width: 90%;
+    height: 60%;
+    margin: 20px 15px;
+    padding: 10px 0px;
+}
+
+#currentimage {
+    margin:auto;
+}
+
+.img-zoom-lens {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    /*set the size of the lens:*/
+    width: 30px;
+    height: 30px;
+}
+
+.img-zoom-result {
+    position: absolute;
+    visibility: hidden;
+    top: 325px;
+    right: 400px;
+    border: 1px solid #d4d4d4;
+    /*set the size of the result div:*/
+    width: 300px;
+    height: 300px;
+    z-index: 10;
+}
+
+.Grid {
+    width: 90%;
+    height: 25%;
+    margin: 10px 20px;
+    padding: 5px;
+    justify-content: center;
+}
+
+.gridimage {
+    height: 70%;
+    width: 150px;
+    margin: 5px 8px;
+    border: 1px solid lightgray;
+}
+
+.TitleContainer {
+    height: 800px;
+    margin: 0;
+    width: 44%;
+    padding: 10px
+}
+
+
+.SkuNameBlock {
+    box-shadow: 0px 1px 5px 1px grey;
+    width: 90%;
+    height: 20%;
+    margin-bottom: 25px;
+    margin-top: 50px;
+    padding: 15px 10px;
+    word-wrap: normal;
+}
+
+
+.BlockTop {
+    width: 100%;
+    height: 25px;
+}
+
+.BlockTop table {
+    width: auto;
+}
+
+.BlockTop td {
+    width: auto;
+    padding: 4px 12px;
+    border: none;
+}
+
+#SkuName {
+    margin: 20px 10px;
+}
+
+#SGClass {
+    margin: 6px 0;
+}
+
+#StyleGuideBlock {
+    background-color:antiquewhite;
+    margin-bottom: 25px;
+    padding: 15px;
+    width: 90%;
+    height: 25%;
+    overflow: auto;
+}
+
+.InfoBlock {
+    background-color: antiquewhite;
+    width: 90%;
+    height: auto;
+    box-shadow: 0px 1px 5px 1px grey;
+}
+
+.InfoBlock table {
+    border: 1px solid lightgray;
+    width:100%;
+    table-layout:fixed;
+}
+
+.InfoBlock td {
+    padding: 4px;
+    min-width: 100px;
+    height: auto;
+    word-wrap:break-word;
+}
+
+.WrittenContentContainer {
+    margin: 8% 5% 0 5%;
+    padding: 50px 75px;
+    width: 99%;
+    min-height: 150px;
+}
+
+.SpecContainer {
+    margin: 0 5%;
+    min-height: 200px;
+    padding: 50px 75px;
+    justify-content: center;
+}
+
+.Specifications {
+    min-width: 1000px;
+    margin: 0px 100px;
+}
+
+.Stable table, td{
+    border: 1px solid lightgray;
+}
+
+.Stable td {
+    width: 20%;
+    padding: 5px;
+    overflow-wrap: normal;
+}
+
+

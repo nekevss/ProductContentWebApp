@@ -1,0 +1,16 @@
+.main-container {
+    margin-top: 75px;
+}
+
+.table-container {
+    margin: 0 3%;
+}
+
+.table-container table {
+    width: 100%;
+}
+
+table, td {
+    border: 2px solid lightgray;
+    border-collapse: collapse;
+}

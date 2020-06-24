@@ -1,0 +1,46 @@
+.main-container {
+    margin: 75px 0;
+}
+
+#memory-message {
+    margin-left: 3%;
+    margin-top: 4px;
+}
+
+.node-container {
+    margin: 0 3%;
+}
+
+.MenuNode {
+    margin-top: 12px;
+    padding: 4px 16px;
+    height: 140px;
+    box-shadow: 0 1px 5px 1px grey;
+}
+
+.MenuNode:hover {
+    background-color: lightgray;
+}
+
+.history-data {
+    height: 100px;
+}
+
+.history-data div {
+    margin-top: 8px;
+}
+
+.NodeClasses {
+    max-height: 48px;
+    overflow-y: auto;
+}
+
+.button-container {
+    height: 28px;
+    float: right;
+}
+
+.button-container button {
+    display: inline-block;
+    margin: 2px 3px;
+}
