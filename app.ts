@@ -1,11 +1,16 @@
 import { Application, Router, send } from "https://deno.land/x/oak/mod.ts";
+import { readJsonSync } from "https://deno.land/std@v0.58.0/fs/mod.ts";
+
 
 const app = new Application();
 const router = new Router();
 const dir:string = Deno.cwd();
 
-router.get('/api/', (context:any) => {
-        context.response.body = "This is the API home"
+
+router
+    .get('/api/', (context:any) => {
+        let data = readJsonSync("./cache/current.json")
+        context.response.body = data;
     });
 
 app.use(router.routes());
