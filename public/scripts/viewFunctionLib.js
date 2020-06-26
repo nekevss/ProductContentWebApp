@@ -1,4 +1,4 @@
-function pagecontent() {
+function pagecontent(SkuObjects) {
     if (isCurrent === false && historyobjects[x] !== null) {
 	    obj = historyobjects[x];
     }
@@ -16,56 +16,56 @@ function pagecontent() {
 
     /*Note: Added both declaration to each option below due to interaction occuring in the selection menu jumping between the last and first sku*/
     try {
-        navigationhandler()
+        navigationhandler(SkuObjects)
     }
     catch (error) {
         console.log(`There was an issue with the navigation button handler:`)
         console.error(`${error}`);
     }
     try {
-        skunamehandler();
+        skunamehandler(obj);
     }
     catch (error) {
         console.log(`There was an issue with the SKU name handler:`)
         console.error(`${error}`);
     }
     try {
-        numbershandler();
+        numbershandler(obj);
     }
     catch (error) {
         console.log(`There was an issue with the numbers handler:`)
         console.error(`${error}`);
     }
     try {
-        extrainfohandler();
+        extrainfohandler(obj);
     }
     catch (error) {
         console.log(`There was an issue with the extra info handler:`)
         console.error(`${error}`);
     }
     try {
-        bullethandler();
+        bullethandler(obj);
     }
     catch (error) {
         console.log(`There was an issue with the bullet handler:`)
         console.error(`${error}`);
     }
     try {
-        imagehandler();
+        imagehandler(obj);
     }
     catch (error) {
         console.log(`There was an issue with the image handler:`)
         console.error(`${error}`);
     }
     try {
-        spechandler();
+        spechandler(obj);
     }
     catch (error) {
         console.log(`There was an issue with the specifications handler:`)
         console.error(`${error}`);
     }
     try {
-        styleguidehandler();
+        styleguidehandler(obj);
     }
     catch (error) {
         console.log(`There was an issue with the Style Guide Handler:`)
@@ -80,7 +80,7 @@ function pagecontent() {
     }
 };
 
-function navigationhandler() {
+function navigationhandler(obj) {
     let navobject;
     if (isCurrent === false) {
 	    navobject = historyobjects;
@@ -107,17 +107,17 @@ function navigationhandler() {
 
 }
 
-function skunamehandler() {
+function skunamehandler(obj) {
     let str = `<table><tr><td>Vendor Model Number: ${obj['Vendor Model Number_NAD']}</td><td>UOM: ${obj['Selling UOM']}</td></tr></table>`;
     document.getElementById("SkuChart").innerHTML = str;
 }
 
-function numbershandler() {
+function numbershandler(obj) {
     let str = `<table><tr><td>Sku Number: ${obj['SKU Number']}</td><td>Wholesaler Item Number: ${obj['Wholesaler Item No']}</td></tr></table>`;
     document.getElementById("SkuNumbersChart").innerHTML = str;
 }
 
-function styleguidehandler() {
+function styleguidehandler(obj) {
     let styleguidekey;
     let pathSG;
     const pathArray = obj['Primary Path'].split("/")
@@ -157,7 +157,7 @@ function styleguidehandler() {
     }
 }
 
-function extrainfohandler() {
+function extrainfohandler(obj) {
     let str = `<table><tr><td>Prohibited and Conditional Words: </td><td>${obj['Prohibited/Conditional Word']}</td></tr>`;
     str += `<tr><td>Content Change Notes: </td><td>${obj['Content Change Notes']}</td></tr>`;
     str += `<tr><td>WE1 Match: </td><td> ${obj['WE1 Match']}</td></tr>`;
@@ -169,7 +169,7 @@ function extrainfohandler() {
     document.getElementById("ExtraInfo").innerHTML = str;
 }
 
-function bullethandler() {
+function bullethandler(obj) {
     let str = "<ul>";
     for (i = 1; i <= 30; i++) {
         keystring = "Bullet_Copy_" + i;
@@ -183,14 +183,14 @@ function bullethandler() {
     document.getElementById('bullets').innerHTML = str;
 }
 
-function imagehandler() {
+function imagehandler(obj) {
     //TODO: add div prior to current image for zoom bug fix
     let sourcestring = "http://www.staples-3p.com/s7/is/image/Staples/" + obj["Primary Image"];
     document.getElementById("CentralImage").innerHTML = `<img id="currentimage" src="${sourcestring}">`;   
     let gridstring = "<img class='gridimage' src='" + sourcestring + "' onclick='changeimage(this)'>";
 
     let count = 1;
-    for (i = 1; i < 8; i++) {
+    for (let i = 1; i < 8; i++) {
         keystring = "Secondary Image " + i;
         if (obj[keystring] !== null) {
             sourcestring = "http://www.staples-3p.com/s7/is/image/Staples/" + obj[keystring]
@@ -217,7 +217,7 @@ function imagehandler() {
 
 }
 
-function spechandler() {
+function spechandler(obj) {
     const SpecObj = obj.Specs;
     //console.log(SpecObj);
     let str = '<table class="Specifications">';
