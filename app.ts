@@ -10,7 +10,13 @@ const dir:string = Deno.cwd();
 router
     .get('/api/', (context:any) => {
         let data = readJsonSync("./cache/current.json")
-        context.response.body = data;
+        context.response.body = JSON.stringify(data, null, 4);
+    })
+    .get('/api/:id', (context:any) => {
+        let data:any = readJsonSync("./cache/current.json")
+        if (context.params && context.params.id && context.params.id <= data.length) {
+            context.response.body = JSON.stringify(data[context.params.id], null, 8);
+        }
     });
 
 app.use(router.routes());
